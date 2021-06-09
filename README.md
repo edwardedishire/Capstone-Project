@@ -29,61 +29,6 @@ Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It ha
 
 ### 3) Data Dictionary
 
-ID                            int64
-Name                         object
-Age                           int64
-Nationality                  object
-Overall                       int64
-Potential                     int64
-Club                         object
-Value (€ Mil)               float64
-Wage                        float64
-Preferred Foot               object
-International Reputation    float64
-Weak Foot                   float64
-Skill Moves                 float64
-Work Rate                    object
-Body Type                    object
-Position                     object
-Contract Expiration          object
-Height                       object
-Weight                       object
-Crossing                    float64
-Finishing                   float64
-HeadingAccuracy             float64
-ShortPassing                float64
-Volleys                     float64
-Dribbling                   float64
-Curve                       float64
-FKAccuracy                  float64
-LongPassing                 float64
-BallControl                 float64
-Acceleration                float64
-SprintSpeed                 float64
-Agility                     float64
-Reactions                   float64
-Balance                     float64
-ShotPower                   float64
-Jumping                     float64
-Stamina                     float64
-Strength                    float64
-LongShots                   float64
-Aggression                  float64
-Interceptions               float64
-Positioning                 float64
-Vision                      float64
-Penalties                   float64
-Composure                   float64
-Marking                     float64
-StandingTackle              float64
-SlidingTackle               float64
-GKDiving                    float64
-GKHandling                  float64
-GKKicking                   float64
-GKPositioning               float64
-GKReflexes                  float64
-General Position             object
-
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
 |ID|Int|fifa19.csv|Player's ID|
@@ -155,10 +100,10 @@ General Position             object
 
 | Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
 |:---------:|:---:|:--------:|:-------:|:----------:|
-Linear Regression|0.8776|-1.110|1.9876|-2.9315|
-Lasso Regression|0.8776|0.8348|0.04285|0.8435|
-Ridge Regression|0.8733|0.8347|0.03855|0.8423|
-Random Forest Regression|0.9967|0.9804|0.01629|0.9719|
+|Linear Regression|0.8776|-1.110|1.9876|-2.9315|
+|Lasso Regression|0.8776|0.8348|0.04285|0.8435|
+|Ridge Regression|0.8733|0.8347|0.03855|0.8423|
+|Random Forest Regression|0.9967|0.9804|0.01629|0.9719|
 
 **Clean Dataset**
 
