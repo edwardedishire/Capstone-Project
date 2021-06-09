@@ -109,10 +109,10 @@ Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It ha
 
 | Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
 |:---------:|:---:|:--------:|:-------:|:----------:|:-----:|
-Linear Regression|0.8417|-2.3443|3.1862|-6.9552|
-Lasso Regression|0.8407|0.8420|0.001291|0.8114|
-Ridge Regression|0.8398|0.8430|0.003259|0.8102|
-Random Forest Regression|0.9945|0.9725|0.02197|0.9601|
+|Linear Regression|0.8417|-2.3443|3.1862|-6.9552|
+|Lasso Regression|0.8407|0.8420|0.001291|0.8114|
+|Ridge Regression|0.8398|0.8430|0.003259|0.8102|
+|Random Forest Regression|0.9945|0.9725|0.02197|0.9601|
 
 ### 6) Conclusion and Executive Summary
 
@@ -120,8 +120,8 @@ Random Forest Regression|0.9945|0.9725|0.02197|0.9601|
 
 Having evaluate five models for our classifier (i.e. KNN, SMV, Log Reg, Random Forest and Extra Trees), their respective scores are as such:
 
-| Model| Train Accuracy|Test Accuracy|   Sensitivity | Baseline acc|True Pos |False Pos|False Neg|True Pos|
-|:---------:|:---:|:--------:|:-------:|:----------:|:-----:|:----------:|:-----:|:-------:|
+| Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
+|:---------:|:---:|:--------:|:-------:|:----------:|
 Random Forest Regression|0.9946|0.9731|0.02139|0.9604|
 
 As we are concerned about correctly predicting a player's transfer value, we have predominantly used the test accuracy score to choose the best performing model. Notwithstanding this, we also looked at the variance and cross validation score so as to ensure that our model does well on unseen data along with a low possibility of under or overfitting. Taking these evaluation metrics into account, we observed that our Random Forest model is the most ideal (as shown in the table above). This goes to suggest that our model predicts 97.31% of the test observations correctly.
