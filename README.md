@@ -108,7 +108,7 @@ Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It ha
 **Clean Dataset**
 
 | Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
-|:---------:|:---:|:--------:|:-------:|:----------:|:-----:|
+|:---------:|:---:|:--------:|:-------:|:----------:|
 |Linear Regression|0.8417|-2.3443|3.1862|-6.9552|
 |Lasso Regression|0.8407|0.8420|0.001291|0.8114|
 |Ridge Regression|0.8398|0.8430|0.003259|0.8102|
