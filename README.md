@@ -21,7 +21,11 @@ The target audience for this project involves anyone associated with talent recr
 
 ### 2) Background
 
-According to the Centers for Disease Control and Prevention, the West Nile virus (WNV) is the leading mosquito-borne disease in the United States ([*Source: CDC, 2009*](https://www.cdc.gov/westnile/index.html)).It is most commonly spread to people by the bite of an infected mosquito. Cases of WNV occur during mosquito season, which starts in the summer and continues through fall. There are no vaccines to prevent or medications to treat WNV in people. Fortunately, most people infected with WNV do not feel sick. About 1 in 5 people who are infected develop a fever and other symptoms. About 1 out of 150 infected people develop a serious, sometimes fatal, illness. People can reduce their risk of WNV by using insect repellent and wearing long-sleeved shirts and long pants to prevent mosquito bites. This is essential as the medical costs can be outstanding especially if the disease progresses and causes neurological symptoms.
+Football, also known soccer in US and Canada, is a well renowned sport with 4 billion fans worldwide. It is particularly popular in Europe, South America and Africa. One reason for its popularity is due to its accessibility. To play football one only requires a football unlike other sports like golf where the equipments can be very costly. Hence, this sport can be played by both the poor and rich. 
+
+Since the past decade, famous video gaming creators EA Sports has been coming out with yearly video game versions of football titled "FIFA" followed by the year. In the game, all players are rated based on real life performances and the ratings are updated weekly. Each player has an "overall score" which is determined by the player's attribute score for this particular position. The game also lists the players estimated transfer value based on real life transfer prices along with other features like the wages and nationality. Hence, this game is very realistic as it relates very closely to the real life situation.
+
+Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It has data on 18207 players with 89 different features.
 
 ### 3) Data Dictionary
 
@@ -82,7 +86,7 @@ General Position             object
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
-|ID|Int||Player's ID|
+|ID|Int|fifa19.csv|Player's ID|
 |Name|String|fifa19.csv|Player's Name|
 |Age|Integer|fifa19.csv|Player's Age|
 |Nationality|String|fifa19.csv|Player's Nationality|
@@ -147,15 +151,25 @@ General Position             object
 
 **Summary table for Models**
 
-| Model| Train Accuracy|Test Accuracy|   Sensitivity | Baseline acc|True Pos |False Pos|False Neg|True Pos|
-|:---------:|:---:|:--------:|:-------:|:----------:|:-----:|:----------:|:-----:|:-------:|
-KNearest Neighbours|1.0|0.9476|0.0563|0.0539|5284|8|285|17|
-Support Vector Machine|0.9471|0.9458|0.0033|0.0539|5290|8|301|1|
-Logistic Regression|0.9488|0.9480|0.0762|0.0539|5280|12|279|23|
-Random Forest| 0.9957|0.9544|0.4172|0.0539|5213|79|176|126|
-Extra Trees| 0.9521|0.9097|0.6126|0.0539|4904|388|117|185|
+**Raw Dataset**
 
-### 6) Cost-Benefit Analysis and Executive Summary
+| Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
+|:---------:|:---:|:--------:|:-------:|:----------:|
+Linear Regression|0.8776|-1.110|1.9876|-2.9315|
+Lasso Regression|0.8776|0.8348|0.04285|0.8435|
+Ridge Regression|0.8733|0.8347|0.03855|0.8423|
+Random Forest Regression|0.9967|0.9804|0.01629|0.9719|
+
+**Clean Dataset**
+
+| Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
+|:---------:|:---:|:--------:|:-------:|:----------:|:-----:|
+Linear Regression|0.8417|-2.3443|3.1862|-6.9552|
+Lasso Regression|0.8407|0.8420|0.001291|0.8114|
+Ridge Regression|0.8398|0.8430|0.003259|0.8102|
+Random Forest Regression|0.9945|0.9725|0.02197|0.9601|
+
+### 6) Conclusion and Executive Summary
 
 **Executive summary**
 
@@ -163,14 +177,8 @@ Having evaluate five models for our classifier (i.e. KNN, SMV, Log Reg, Random F
 
 | Model| Train Accuracy|Test Accuracy|   Sensitivity | Baseline acc|True Pos |False Pos|False Neg|True Pos|
 |:---------:|:---:|:--------:|:-------:|:----------:|:-----:|:----------:|:-----:|:-------:|
-KNearest Neighbours|1.0|0.9476|0.0563|0.0539|5284|8|285|17|
-Support Vector Machine|0.9471|0.9458|0.0033|0.0539|5290|8|301|1|
-Logistic Regression|0.9488|0.9480|0.0762|0.0539|5280|12|279|23|
-Random Forest| 0.9957|0.9544|0.4172|0.0539|5213|79|176|126|
-Extra Trees| 0.9521|0.9097|0.6126|0.0539|4904|388|117|185|
+Random Forest Regression|0.9946|0.9731|0.02139|0.9604|
 
-As we are concerned about correctly identifying the presence of the West Nile Virus, we have predominantly used the test accuracy score to choose the best performing model. Notwithstanding this, we also looked at the sensitivity score so as to ensure that we keep our false positives to a minimum. Taking these two evaluation metrics into account, we observed that our Random Forest model is the most ideal (i.e. test accuracy of 0.9544 and sensitivity of 0.4172).
+As we are concerned about correctly predicting a player's transfer value, we have predominantly used the test accuracy score to choose the best performing model. Notwithstanding this, we also looked at the variance and cross validation score so as to ensure that our model does well on unseen data along with a low possibility of under or overfitting. Taking these evaluation metrics into account, we observed that our Random Forest model is the most ideal (as shown in the table above). This goes to suggest that our model predicts 97.31% of the test observations correctly.
 
-This goes to suggest that our model predicts 95.44% of the test observations correctly. Among obsevations that have the West Nile Virus, our model has 41.72% of them classified accurately.
-
-Re cost-benefit analysis, our earlier paragraph shows that the cost of spraying the whole of Chicago fortnightly for 6 months (including the summer months) will cost about $2.8mil. This is far lower that the total estimated hospitalisation costs (see figures under "Chicago Mean Cost" from table above) from West Nile Virus and demonstrates a clear impetus for the city of Chicago to spray insecticide city-wide to reduce the spread of the virus.
+Our model also lists out the importance features that highly co-relates to a player's value. Not surprisingly, the feature with the highest corelation with value is the player's overall score, followed by potential.
