@@ -114,7 +114,7 @@ Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It ha
 |Ridge Regression|0.8398|0.8430|0.003259|0.8102|
 |Random Forest Regression|0.9945|0.9725|0.02197|0.9601|
 
-### 6) Conclusion and Executive Summary
+### 6) Conclusion 
 
 **Executive summary**
 
@@ -126,4 +126,7 @@ Random Forest Regression|0.9946|0.9731|0.02139|0.9604|
 
 As we are concerned about correctly predicting a player's transfer value, we have predominantly used the test accuracy score to choose the best performing model. Notwithstanding this, we also looked at the variance and cross validation score so as to ensure that our model does well on unseen data along with a low possibility of under or overfitting. Taking these evaluation metrics into account, we observed that our Random Forest model is the most ideal (as shown in the table above). This goes to suggest that our model predicts 97.31% of the test observations correctly.
 
-Our model also lists out the importance features that highly co-relates to a player's value. Not surprisingly, the feature with the highest corelation with value is the player's overall score, followed by potential.
+Our model also lists out the importance features that highly co-relates to a player's value. Not surprisingly, the feature with the highest corelation with value is the player's overall score, followed by potential. With the model being able to predict a player's transfer value accurately, this reduces the chances of our football club overpaying for purchase of players. Furthermore, with the GAFC Player Scouter vers 1.38 Recommender System and customised player scouter available, we are able to bring shortlist suitable players to strengthen our squad or replace departing players. By paying the right transfer price and bringing in the right players, it would do the football club well in both on field results and financials. 
+
+**Future Work**
+Moving forward, i would like to try out more variations of the dataset and explore more models to see if there is a better alternative to the current model i chosen (Random Forest). I would also like to use this year's version of the dataset (FIFA 21) should it be available. As for the recomemnder system, i aim to create a flask API web page and get people to try out the recommender system along with providing feedback about the usefulness and reliability of it. From there, i can use the feedbacks and worok towards improving the recommender system.
