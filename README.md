@@ -118,7 +118,7 @@ Therefore, for this project, i will be using the FIFA19 dataset on kaggle. It ha
 
 **Executive summary**
 
-Having evaluate five models for our classifier (i.e. KNN, SMV, Log Reg, Random Forest and Extra Trees), their respective scores are as such:
+After evaluating four regression models (i.e. Linear, Lasso, Ridge and Random Forest), i have opted to select Random Forest as my final model.
 
 | Model| Train Accuracy|Test Accuracy|Variance|Cross Validation Score|
 |:---------:|:---:|:--------:|:-------:|:----------:|
