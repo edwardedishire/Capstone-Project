@@ -1,5 +1,5 @@
 # Capstone Project
-GA Capstone Project - Edward Koh
+GA Capstone Project - Edward Edishire Koh
 
 ### 1) Problem Statement
 
